@@ -30,4 +30,4 @@ RUN cd /opt/tools && cp esp-open-sdk.tar.gz ../ && cd .. && tar -zxvf esp-open-s
 ADD ./sdk /opt/sdk
 ADD ./sdk-overrides /opt/sdk-overrides
 ENV PATH $PATH:/opt/esp-open-sdk/sdk:/opt/esp-open-sdk/xtensa-lx106-elf/bin
-CMD export PATH=$PATH:/opt/esp-open-sdk/sdk:/opt/esp-open-sdk/xtensa-lx106-elf/bin && make clean all SDK_DIR=/opt/sdk/esp_iot_sdk_v1.4.0 ESPTOOL=/opt/tools/esptool.py
+CMD export PATH=$PATH:/opt/esp-open-sdk/sdk:/opt/esp-open-sdk/xtensa-lx106-elf/bin && make clean all SDK_BASE=/opt/sdk/esp_iot_sdk_v1.5.3 ESPTOOL=/opt/tools/esptool.py XTENSA_TOOLS_ROOT=/opt/esp-open-sdk/xtensa-lx106-elf/bin
